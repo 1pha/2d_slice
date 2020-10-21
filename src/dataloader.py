@@ -45,8 +45,6 @@ class MyDataset(Dataset):
         else:
             x = nib.load(self.data_files[idx]).get_fdata()
             
-        x = x[None, :, :].float()
-        
         return x
 
     def __len__(self):
